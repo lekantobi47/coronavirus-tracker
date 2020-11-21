@@ -18,6 +18,14 @@
                 <th>Changes since last day</th>
             </tr>
         </thead>
+        <tbody>
+            <tr th:each="data : ${coronavirusData}">
+                <td th:text="${data.state}"></td>
+                <td th:text="${data.country}"></td>
+                <td th:text="${data.currentCases}"></td>
+                <td th:text="${data.prevDayCases}"></td>
+            </tr>
+        </tbody>
     </table>
 </body>
 </html>
