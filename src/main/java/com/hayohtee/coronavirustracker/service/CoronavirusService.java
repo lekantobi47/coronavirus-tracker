@@ -44,7 +44,7 @@ public class CoronavirusService {
         for (CSVRecord record : records) {
             CoronavirusData data = new CoronavirusData();
             int currentCases = Integer.parseInt(record.get(record.size() - 1));
-            int prevDayCases = Integer.parseInt(record.get(record.size() - 1));
+            int prevDayCases = Integer.parseInt(record.get(record.size() - 2));
 
             data.setCountry(record.get("Country/Region"));
             data.setState(record.get("Province/State"));
